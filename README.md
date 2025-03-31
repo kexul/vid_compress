@@ -23,10 +23,10 @@ A simple and efficient video compression tool with a user-friendly TKinter inter
 4. Wait for completion
 
 ## 🖼 Screenshots
-<div style="display: flex; flex-direction: column; gap: 20px; margin: 20px 0;">
-    <img src="https://github.com/user-attachments/assets/67cec91b-3bc2-419e-b884-49d4f36d0266" alt="Main Interface" style="width: 100%;">
-    <img src="https://github.com/user-attachments/assets/f0696d52-fcb8-4dd1-af48-70c7850feed2" alt="Compression in Progress" style="width: 100%;">
-</div>
+
+![Main Interface](https://github.com/user-attachments/assets/67cec91b-3bc2-419e-b884-49d4f36d0266)
+
+![Compression in Progress](https://github.com/user-attachments/assets/f0696d52-fcb8-4dd1-af48-70c7850feed2)
 
 ## 🤝 Contributing
 Feel free to contribute to this project by:
