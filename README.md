@@ -1,10 +1,39 @@
-Small TKinter UI to compress video
+# Video Compressor UI 📹
 
-Vibe coding experiment!
+A simple and efficient video compression tool with a user-friendly TKinter interface.
 
-![image](https://github.com/user-attachments/assets/f0696d52-fcb8-4dd1-af48-70c7850feed2)
+## ✨ Features
+- Drag and drop video files
+- Live video preview
+- Simple and intuitive interface
 
-Requirements:
-* tkinterdnd2 (for file drag and drop support)
-* opencv (for video preview)
-* PIL (for video preview)
+## 🚀 Installation
+
+### Prerequisites
+* Python 3.7+
+* ffmpeg in system PATH
+* Required Python packages:
+  ```bash
+  pip install tkinterdnd2 opencv-python pillow
+  ```
+
+## 📖 Usage
+1. Launch the application
+2. Drag & drop your video file
+4. Wait for completion
+
+## 🖼 Screenshots
+<div style="display: flex; flex-direction: column; gap: 20px; margin: 20px 0;">
+    <img src="https://github.com/user-attachments/assets/67cec91b-3bc2-419e-b884-49d4f36d0266" alt="Main Interface" style="width: 100%;">
+    <img src="https://github.com/user-attachments/assets/f0696d52-fcb8-4dd1-af48-70c7850feed2" alt="Compression in Progress" style="width: 100%;">
+</div>
+
+## 🤝 Contributing
+Feel free to contribute to this project by:
+- Reporting bugs
+- Suggesting new features
+- Creating pull requests
+
+## 📝 License
+MIT License
+
