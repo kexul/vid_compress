@@ -186,17 +186,17 @@ def get_file_size(file_path):
     return round(size_bytes / (1024 * 1024), 2)
 
 def compress_video(input_file, output_file):
-    try:
-        subprocess.run(['ffmpeg', '-version'], capture_output=True)
-    except FileNotFoundError:
-        status_label.config(text="Error: FFmpeg not found", foreground="red")
+    ffmpeg_path = os.path.join(os.path.dirname(__file__), "ffmpeg.exe")
+    
+    if not os.path.exists(ffmpeg_path):
+        status_label.config(text="Error: ffmpeg.exe not found in program directory", foreground="red")
         return
     
     input_size = get_file_size(input_file)
     
     # First get compressed preview frame
     preview_cmd = [
-        "ffmpeg", "-i", input_file,
+        ffmpeg_path, "-i", input_file,
         "-vframes", "1",  # Process only one frame
         "-c:v", "libx264",
         "-crf", "23",
@@ -214,13 +214,15 @@ def compress_video(input_file, output_file):
         print(f"Preview generation failed: {e}")
     
     # Continue full compression process
-    ffmpeg_cmd = ["ffmpeg", "-i", input_file,
-                 "-c:v", "libx264",
-                 "-crf", "23",
-                 "-preset", "medium",
-                 "-c:a", "aac",
-                 "-b:a", "128k",
-                 "-y", output_file]
+    ffmpeg_cmd = [
+        ffmpeg_path, "-i", input_file,
+        "-c:v", "libx264",
+        "-crf", "23",
+        "-preset", "medium",
+        "-c:a", "aac",
+        "-b:a", "128k",
+        "-y", output_file
+    ]
     
     canvas_bottom.config(state=tk.DISABLED)
     status_label.config(text=f"File size: {input_size}MB, Compressing...", foreground="blue")

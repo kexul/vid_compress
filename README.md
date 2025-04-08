@@ -11,7 +11,6 @@ A simple and efficient video compression tool with a user-friendly TKinter inter
 
 ### Prerequisites
 * Python 3.7+
-* ffmpeg in system PATH
 * Required Python packages:
   ```bash
   pip install tkinterdnd2 opencv-python pillow
